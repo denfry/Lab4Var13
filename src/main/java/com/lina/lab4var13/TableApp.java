@@ -50,6 +50,10 @@ public class TableApp extends Application {
         TableColumn<SportEquipment, String> sportEquipmentTypeTableColumn = new TableColumn<>("Sport Equipment Type");
         sportEquipmentTypeTableColumn.setCellValueFactory(new PropertyValueFactory<>("sportEquipmentType"));
 
+        isProffessionalColumn.prefWidthProperty().bind(table.widthProperty().multiply(0.1));
+        sportEquipmentTypeTableColumn.prefWidthProperty().bind(table.widthProperty().multiply(0.1));
+
+
 
         table.getColumns().addAll(typeColumn, priceColumn, sumColumn, brandColumn, isProffessionalColumn, sportEquipmentTypeTableColumn);
         table.setItems(sportEquipment);
